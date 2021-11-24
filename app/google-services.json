@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "969841513278",
+    "project_id": "ticketit-897eb",
+    "storage_bucket": "ticketit-897eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969841513278:android:3496bd2a2158626d0fd26f",
+        "android_client_info": {
+          "package_name": "com.cooldevs.ticketit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969841513278-l3u10rn5u2u9sk6r63d1a80epe77vok7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUV6JF14T9gdeW00ZPQioFVpbLdPyN4oM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969841513278-l3u10rn5u2u9sk6r63d1a80epe77vok7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
