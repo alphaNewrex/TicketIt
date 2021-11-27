@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".TransportActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="256dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="128dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,27 +18,21 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/book_btn"
+            android:id="@+id/busBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Book Ticket " />
+            android:text="Bus" />
 
         <Button
-            android:id="@+id/cancel_btn"
+            android:id="@+id/trainBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@android:string/cancel" />
+            android:text="Train" />
 
         <Button
-            android:id="@+id/admin_btn"
+            android:id="@+id/flightBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Admin Control" />
-
-        <Button
-            android:id="@+id/logoutBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Logout" />
+            android:text="Flight" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
