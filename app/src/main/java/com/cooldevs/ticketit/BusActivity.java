@@ -38,7 +38,7 @@ public class  BusActivity extends AppCompatActivity  implements DatePickerDialog
         Spinner arrivalSpinner =findViewById(R.id.arrivalSpinner);
         Spinner destinationSpinner =findViewById(R.id.departureSpinner);
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(BusActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Arrival));
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.BusArrival));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         arrivalSpinner.setAdapter(myAdapter);
 

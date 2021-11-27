@@ -1,9 +1,23 @@
 <resources>
     <string name="app_name">TicketIt</string>
-    <string-array name="Arrival">
+    <string-array name="BusArrival">
         <item>Goa</item>
         <item>Delhi</item>
         <item>Mumbai</item>
         <item>Indore</item>
+    </string-array>
+
+    <string-array name="TrainArrival">
+        <item>Madgaon Junction</item>
+        <item>Delhi Junction</item>
+        <item>Mumbai Junction</item>
+        <item>Indore Junction</item>
+    </string-array>
+
+    <string-array name="FlightArrival">
+        <item>Goa Airport</item>
+        <item>Indira Gandhi Airport</item>
+        <item>Shivaji Maharaj Airport</item>
+        <item>Devi Ahilyabai Airport</item>
     </string-array>
 </resources>
