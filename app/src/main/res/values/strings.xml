@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TicketIt</string>
+    <string-array name="Arrival">
+        <item>Goa</item>
+        <item>Delhi</item>
+        <item>Mumbai</item>
+        <item>Indore</item>
+    </string-array>
 </resources>
