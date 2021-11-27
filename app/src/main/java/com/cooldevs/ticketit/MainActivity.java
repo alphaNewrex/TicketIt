@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.cooldevs.ticketit.models.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userId;
     Boolean adminCheck;
+    User u1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +37,27 @@ public class MainActivity extends AppCompatActivity {
     fname=findViewById(R.id.fname_text);
     fStore=FirebaseFirestore.getInstance();
     userId= fAuth.getCurrentUser().getUid();
-    adminCheck=false;
+
+        DocumentReference documentReference = fStore.collection("users").document(userId);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                u1 =new User(value.getString("fName"),value.getString("email"),value.getString("phoneNo"),value.getBoolean("admin"),value.getString("username"));
+
+                fname.setText("Welcome! " + u1.fname);
+
+
+                if (u1.admin == true)
+                {
+                    adminBtn.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    adminBtn.setVisibility(View.GONE);
+                }
+            }
+
+        });
     bookTicket.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -55,24 +77,7 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
-    DocumentReference documentReference = fStore.collection("users").document(userId);
-    documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-        @Override
-        public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-            fname.setText("Welcome! " + value.getString("fName"));
 
-            adminCheck=value.getBoolean("admin");
-            if (adminCheck == true)
-            {
-                adminBtn.setVisibility(View.VISIBLE);
-            }
-            else
-            {
-                adminBtn.setVisibility(View.GONE);
-            }
-        }
-
-    });
 
 
     logoutBTn.setOnClickListener(new View.OnClickListener() {

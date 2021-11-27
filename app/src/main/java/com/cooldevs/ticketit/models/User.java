@@ -1,9 +1,10 @@
 package com.cooldevs.ticketit.models;
 
 public class User {
-    public String fname,email,phoneno,admin,username;
+    public String fname,email,phoneno,username;
+    public boolean admin;
 
-    public User (String fname,String email,String phoneno,String admin,String username)
+    public User (String fname,String email,String phoneno,Boolean admin,String username)
     {
         this.fname= fname;
         this.email=email;
