@@ -1,6 +1,8 @@
 package com.cooldevs.ticketit.models;
 
-    public abstract class Transport {
+import java.io.Serializable;
+
+public abstract class Transport implements Serializable{
         public String name;
         public String Id;
         public String startPoint;

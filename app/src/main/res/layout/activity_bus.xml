@@ -98,16 +98,16 @@
         app:layout_constraintVertical_bias="0.521">
 
         <LinearLayout
-            android:padding="4dp"
+            android:id="@+id/busll1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
             android:layout_marginBottom="32dp"
             android:layout_weight="1"
-            android:backgroundTint="#C5BFBF"
             android:orientation="vertical"
+            android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -178,19 +178,27 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Book" />
+
         </LinearLayout>
 
         <LinearLayout
-            android:padding="4dp"
+            android:id="@+id/busll2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="2dp"
             android:layout_weight="1"
-            android:backgroundTint="#C5BFBF"
+            android:clickable="true"
             android:orientation="vertical"
+            android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -260,6 +268,13 @@
                     android:text="Price : "
                     android:textSize="20sp" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="book" />
 
         </LinearLayout>
 

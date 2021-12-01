@@ -55,11 +55,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Arrival"
+                android:text="@string/arrival"
                 android:textAlignment="center"
                 android:textColor="@color/primary"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="to" />
 
             <TextView
                 android:id="@+id/city2"
@@ -82,7 +90,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/dateView"
+                android:id="@+id/dateFinalView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

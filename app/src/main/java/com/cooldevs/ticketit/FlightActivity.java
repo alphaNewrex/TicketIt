@@ -115,15 +115,15 @@ public class  FlightActivity extends AppCompatActivity  implements DatePickerDia
 
 
     public void selectOption1(){
-        f = new Flight("Flight","Airbus A320",city11.toString(),city12.toString(),500,date,"7 A.M");
+        f = new Flight("Flight","Airbus A320",arrival,destination,500,date,"7 A.M");
         Intent i = new Intent(this,PassengerActivity.class);
-        i.putExtra("transport", (Parcelable) f);
+        i.putExtra("transport", (Serializable) f);
         startActivity(i);
     }
     public void selectOption2(){
-        f = new Flight("Flight","Airbus A220",city21.toString(),city22.toString(),790,date,"5 P.M");
+        f = new Flight("Flight","Airbus A220",arrival,destination,790,date,"5 P.M");
         Intent i = new Intent(this,PassengerActivity.class);
-        i.putExtra("transport", (CharSequence) f);
+        i.putExtra("transport", (Serializable) f);
         startActivity(i);
     }
 

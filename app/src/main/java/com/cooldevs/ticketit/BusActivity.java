@@ -22,7 +22,7 @@ public class  BusActivity extends AppCompatActivity  implements DatePickerDialog
 
     String arrival,destination,date;
     TextView dateText,city11,city12,city21,city22,date1,date2,price1,price2;
-    Button findB;
+    Button findB,bookBus1,bookBus2;
     Bus b;
 
     @Override
@@ -39,6 +39,8 @@ public class  BusActivity extends AppCompatActivity  implements DatePickerDialog
         date2=findViewById(R.id.dateView2);
         price1=findViewById(R.id.priceView1);
         price2= findViewById(R.id.priceView2);
+        bookBus1=findViewById(R.id.button4);
+        bookBus2=findViewById(R.id.button5);
 
         Spinner arrivalSpinner =findViewById(R.id.arrivalSpinner);
         Spinner destinationSpinner =findViewById(R.id.departureSpinner);
@@ -56,6 +58,18 @@ public class  BusActivity extends AppCompatActivity  implements DatePickerDialog
             @Override
             public void onClick(View v) {
                 showDatePicker();
+            }
+        });
+        bookBus1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectOption1();
+            }
+        });
+        bookBus2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectOption2();
             }
         });
 
@@ -91,13 +105,13 @@ public class  BusActivity extends AppCompatActivity  implements DatePickerDialog
 //    ListView myListView = findViewById(R.id.myListView);
 
     public void selectOption1(){
-        b = new Bus("bus","Bus 621",city11.toString(),city12.toString(),100,date,"9 A.M");
+        b = new Bus("bus","Bus 621",arrival,destination,100,date,"9 A.M");
         Intent i = new Intent(this,PassengerActivity.class);
         i.putExtra("transport", (Serializable) b);
         startActivity(i);
     }
     public void selectOption2(){
-        b = new Bus("Bus","Bus 220",city21.toString(),city22.toString(),120,date,"10 P.M");
+        b = new Bus("Bus","Bus 220",arrival,destination,120,date,"10 P.M");
         Intent i = new Intent(this,PassengerActivity.class);
         i.putExtra("transport", (Serializable) b);
         startActivity(i);
