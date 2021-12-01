@@ -33,7 +33,7 @@ public class  FlightActivity extends AppCompatActivity  implements DatePickerDia
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_train);
+        setContentView(R.layout.activity_flight);
         dateText =findViewById(R.id.showDate);
         findB=findViewById(R.id.button2);
         city11=findViewById(R.id.city1_1);
@@ -68,18 +68,18 @@ public class  FlightActivity extends AppCompatActivity  implements DatePickerDia
                 showDatePicker();
             }
         });
-//        book1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                selectOption1();
-//            }
-//        });
-//        book2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                selectOption2();
-//            }
-//        });
+        book1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectOption1();
+            }
+        });
+        book2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectOption2();
+            }
+        });
 
         findB.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
@@ -117,13 +117,13 @@ public class  FlightActivity extends AppCompatActivity  implements DatePickerDia
     public void selectOption1(){
         f = new Flight("Flight","Airbus A320",city11.toString(),city12.toString(),500,date,"7 A.M");
         Intent i = new Intent(this,PassengerActivity.class);
-        i.putExtra("transport", (Serializable) f);
+        i.putExtra("transport", (Parcelable) f);
         startActivity(i);
     }
     public void selectOption2(){
         f = new Flight("Flight","Airbus A220",city21.toString(),city22.toString(),790,date,"5 P.M");
         Intent i = new Intent(this,PassengerActivity.class);
-        i.putExtra("transport", (Serializable) f);
+        i.putExtra("transport", (CharSequence) f);
         startActivity(i);
     }
 
