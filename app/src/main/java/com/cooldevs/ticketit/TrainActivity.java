@@ -3,6 +3,7 @@ package com.cooldevs.ticketit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -11,6 +12,10 @@ import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.cooldevs.ticketit.models.Bus;
+import com.cooldevs.ticketit.models.Train;
+
+import java.io.Serializable;
 import java.util.Calendar;
 
 public class  TrainActivity extends AppCompatActivity  implements DatePickerDialog.OnDateSetListener{
@@ -18,6 +23,8 @@ public class  TrainActivity extends AppCompatActivity  implements DatePickerDial
     String arrival,destination,date;
     TextView dateText,city11,city12,city21,city22,date1,date2,price1,price2;
     Button findB;
+
+    Train t;
 
 
     @Override
@@ -85,7 +92,18 @@ public class  TrainActivity extends AppCompatActivity  implements DatePickerDial
 
 //    ListView myListView = findViewById(R.id.myListView);
 
-
+    public void selectOption1(View view){
+        t = new Train("bus","Bus 621",city11.toString(),city12.toString(),100,date,"9 A.M");
+        Intent i = new Intent(this,PassengerActivity.class);
+        i.putExtra("transport", (Serializable) t);
+        startActivity(i);
+    }
+    public void selectOption2(View view){
+        t = new Train("Bus","Bus 220",city21.toString(),city22.toString(),120,date,"10 P.M");
+        Intent i = new Intent(this,PassengerActivity.class);
+        i.putExtra("transport", (Serializable) t);
+        startActivity(i);
+    }
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {

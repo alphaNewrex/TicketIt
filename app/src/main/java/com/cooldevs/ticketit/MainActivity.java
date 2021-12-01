@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 fname.setText("Welcome! " + u1.fname);
-
+//
 
 //                if (u1.admin)
 //                {
