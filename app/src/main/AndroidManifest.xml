@@ -12,19 +12,27 @@
         <activity android:name=".FinalAvtivity"></activity>
         <activity android:name=".PassengerActivity" />
         <activity android:name=".DetailActivity" />
+<<<<<<< HEAD
         <activity android:name=".FlightActivity"></activity>
         <activity android:name=".TrainActivity" />
         <activity android:name=".BusActivity" />
-        <activity android:name=".AdminActivity" />
-        <activity android:name=".CancelActivity" />
-        <activity android:name=".TransportActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity">
+=======
+        <activity android:name=".FlightActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".TrainActivity"></activity>
+        <activity android:name=".BusActivity"></activity>
+>>>>>>> bc8bc76 (Made Recycler view with option of adding name and age)
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".CancelActivity" />
+        <activity android:name=".TransportActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".LoginActivity">
+
         </activity>
         <activity android:name=".MainActivity" />
     </application>
