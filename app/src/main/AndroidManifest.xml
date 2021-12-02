@@ -9,15 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TicketIt">
-        <activity android:name=".FinalAvtivity"></activity>
+        <activity android:name=".FinalAvtivity">
+
+        </activity>
         <activity android:name=".PassengerActivity" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".FlightActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".TrainActivity"></activity>
         <activity android:name=".BusActivity"></activity>
@@ -26,6 +24,11 @@
         <activity android:name=".TransportActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".MainActivity" />

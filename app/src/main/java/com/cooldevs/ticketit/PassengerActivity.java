@@ -25,6 +25,8 @@ public class    PassengerActivity extends AppCompatActivity {
     RecyclerContactAdapter adapter;
     RecyclerView recyclerView;
     FloatingActionButton btnOpenDialog;
+    Button btn;
+
 
 
     @Override
@@ -40,13 +42,19 @@ public class    PassengerActivity extends AppCompatActivity {
         city1=findViewById(R.id.city1);
         city2=findViewById(R.id.city2);
         date=findViewById(R.id.dateFinalView);
+        btn=findViewById(R.id.button9);
 
         selectedTransport.setText(String.format("%s - %s", transport.name, transport.Id));
         price.setText(String.format("$ : %d", transport.fare));
         city1.setText(transport.startPoint);
         city2.setText(transport.endpoint);
         date.setText(String.format("%s  Time :%s", transport.date, transport.time));
-
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),FinalAvtivity.class));
+            }
+        });
         RecyclerView recyclerView = findViewById(R.id.recyclerContact);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -74,6 +82,7 @@ public class    PassengerActivity extends AppCompatActivity {
 
                 });
                 dialog.show();
+
 
             }
         });
