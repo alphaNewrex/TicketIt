@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.cooldevs.ticketit.models.Transport;
 
-public class PassengerActivity extends AppCompatActivity {
+public class    PassengerActivity extends AppCompatActivity {
 
     TextView date,city1,city2,price,selectedTransport;
 
